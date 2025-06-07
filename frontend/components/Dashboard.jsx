@@ -10,8 +10,8 @@ const Dashboard = () => {
           <h1 className="text-xl font-light">Gemini</h1>
 
           {/* dropdown */}
-          <div className="bg-[#282a2c] rounded-4xl px-4 py-0.5">
-            <button className="text-[14px] text-gray-400 flex items-center gap-1">
+          <div className="bg-[#282a2c] rounded-4xl hover:bg-gray-800 px-4 py-0.5">
+            <button className="text-[14px] text-gray-400 flex cursor-pointer items-center gap-1">
               <span>2.5 flash</span>
               <span>
                 <img className="w-4 h-4 " src="https://img.icons8.com/?size=100&id=39786&format=png&color=737373" alt="" />
@@ -24,7 +24,7 @@ const Dashboard = () => {
         {/* side buttons */}
         <div className="flex items-center gap-4">
 
-          <button className="bg-[#3d3f42] flex gap-3 text-[13px] px-6 rounded-2xl py-3">
+          <button className="bg-[#3d3f42] flex hover:bg-[#5c5f6c] gap-3 text-[13px] cursor-pointer px-6 rounded-2xl py-3">
             <span>
               <img className="w-4 h-4" src="https://img.icons8.com/?size=100&id=VSROkm9ByHs0&format=png&color=F25081" alt="" />
             </span>
@@ -42,7 +42,7 @@ const Dashboard = () => {
 
       {/* middle div */}
       <div className="flex w-[78vw] h-[80vh]  justify-center items-center ">
-        <p class="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-rose-500">
+        <p class="text-3xl text-transparent bg-clip-text bg-gradient-to-r font-medium from-indigo-500 via-purple-500 to-rose-500">
           Hello, Arshit
         </p>
       </div>
@@ -57,9 +57,9 @@ const Dashboard = () => {
             <input className="w-full p-1 focus:outline-0 " type="text" name="prompt" id="prompt" placeholder="Ask gemini" />
           </div>
 
-          <div className="flex items-center justify-between opacity-55">
+          <div className="flex items-center justify-between opacity-60">
             <div className="flex gap-3 items-center">
-              <span className="px-1 py-1 hover:bg-gray-700 rounded-full">
+              <span className="px-1 py-1 hover:bg-gray-700 cursor-pointer rounded-full">
                 <img className="w-5 h-5" src="https://img.icons8.com/?size=100&id=11153&format=png&color=EBEBEB" alt="" />
               </span>
 
@@ -75,8 +75,8 @@ const Dashboard = () => {
             </div>
 
             <div>
-              <span className="hover:bg-gray-700 cursor-pointer flex px-2 py-1 rounded-full">
-                <img className="w-5 h-5" src="https://img.icons8.com/?size=100&id=8LR9OAENZPeS&format=png&color=EBEBEB" alt="" />
+              <span className="hover:bg-gray-700 cursor-pointer flex px-1 py-1 rounded-full">
+                <img className="w-6 h-6" src="https://img.icons8.com/?size=100&id=8LR9OAENZPeS&format=png&color=EBEBEB" alt="" />
               </span>
             </div>
 

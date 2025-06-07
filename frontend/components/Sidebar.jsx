@@ -5,16 +5,16 @@ const Sidebar = () => {
       <div className="flex-1 flex flex-col gap-10 overflow-y-auto pr-1">
         {/* upper */}
         <div className="flex justify-between items-center">
-          <span>
-            <img className="w-5 h-5" src="https://img.icons8.com/?size=100&id=120374&format=png&color=EBEBEB" alt="" />
+          <span className="">
+            <img className="p-2 rounded-full w-9 h-9 cursor-pointer hover:bg-gray-700 " src="https://img.icons8.com/?size=100&id=120374&format=png&color=EBEBEB" alt="" />
           </span>
-          <span>
-            <img className="w-5 h-5" src="https://img.icons8.com/?size=100&id=7695&format=png&color=737373" alt="" />
+          <span className="">
+            <img className="p-2 rounded-full w-9 h-9 cursor-pointer hover:bg-gray-700 " src="https://img.icons8.com/?size=100&id=7695&format=png&color=737373" alt="" />
           </span>
         </div>
 
         {/* new chat */}
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 cursor-pointer hover:bg-gray-700 px-2 py-1 rounded-2xl">
           <span>
             <img className="w-6 h-6" src="https://img.icons8.com/?size=100&id=kCViyr9hZtLX&format=png&color=737373" alt="" />
           </span>
