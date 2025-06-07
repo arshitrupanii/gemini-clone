@@ -41,7 +41,7 @@ const Dashboard = () => {
 
 
       {/* middle div */}
-      <div className="flex w-[78vw] h-[80vh]  justify-center items-center ">
+      <div className="flex w-[78vw] h-[70vh]  justify-center items-center ">
         <p class="text-3xl text-transparent bg-clip-text bg-gradient-to-r font-medium from-indigo-500 via-purple-500 to-rose-500">
           Hello, Arshit
         </p>
