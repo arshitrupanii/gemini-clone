@@ -16,6 +16,8 @@ const generateResponse = async(req, res) => {
         const response = await ai.models.generateContent({
             model: "gemini-1.5-flash",
             contents: prompt,
+            systemInstruction:`response must be in organize in paragraph headline and add emoji if needed`
+            
         });
 
         res.send({ response: response.text });

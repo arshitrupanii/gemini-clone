@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Chat_area = ({ prompts, responses }) => {
   if (!prompts || prompts.length === 0) {
@@ -16,7 +15,7 @@ const Chat_area = ({ prompts, responses }) => {
 
           {/* Gemini Response */}
           {responses[index] && (
-            <div className="w-fit flex text-[15px] items-center gap-2 mr-auto left-0 p-3 bg-gray-800 text-white rounded shadow">
+            <div className="w-fit flex text-[15px] gap-2 mr-auto left-0 p-3 bg-gray-800 text-white rounded shadow">
               <img className='w-5 h-5' src="https://img.icons8.com/?size=100&id=iBkBIBWE6tfT&format=png&color=000000" alt="" />
               {responses[index]}
             </div>
