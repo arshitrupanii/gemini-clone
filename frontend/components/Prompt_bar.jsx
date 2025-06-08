@@ -1,15 +1,14 @@
-import { useState } from "react"
+import Chat_area from "./Chat_area"
 
-const Prompt_bar = () => {
-    const [prompt, setPrompt] = useState("")
+const Prompt_bar = ({ prompt, setPrompt }) => {
 
     const handlechange = (e) => {
         setPrompt(e.target.value)
     }
 
     const handlesubmit = () => {
-        console.log(prompt)
-        setPrompt("");
+      <Chat_area prompt={prompt}/>
+      setPrompt("");
     }
 
     const handleKeypress = (e) => {
