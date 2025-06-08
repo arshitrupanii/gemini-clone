@@ -4,7 +4,11 @@ import Navbar from "./Navbar"
 import Prompt_bar from "./Prompt_bar"
 
 const Dashboard = () => {
-  const [prompt, setPrompt] = useState("")
+  const [prompts, setPrompts] = useState([])
+
+  const handleSubmit = (newMessage) => {
+    setPrompts(prev => [...prev, newMessage]);
+  };
 
   return (
     <div className="w-[78vw] h-screen text-white p-4">
@@ -14,11 +18,11 @@ const Dashboard = () => {
 
 
       {/* chat area */}
-      <Chat_area prompt={prompt}/>
+      <Chat_area prompts={prompts}/>
 
 
       {/* prompt bar */}
-     <Prompt_bar prompt={prompt} setPrompt={setPrompt}/>
+     <Prompt_bar onSubmit={handleSubmit}/>
 
     </div>
   )
