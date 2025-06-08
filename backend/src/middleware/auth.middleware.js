@@ -8,7 +8,6 @@ dotenv.config();
 // Checks for valid JWT token in cookies and attaches user to request
 export const authMiddleware = async (req, res, next) => {
     // Extract JWT token from cookies
-    console.log(req.cookies)
     const token = req.cookies.jwt;
 
     try {
