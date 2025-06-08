@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const messagesSchema = new mongoose.Schema({
-    user : {type : String, required : true},
+    id: {type : String},
     prompt : {type: String},
-    ai : {type:String}
+    response : {type:String}
 
 }, {timestamps: true})
 

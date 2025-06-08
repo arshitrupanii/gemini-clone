@@ -17,5 +17,5 @@ app.use('/api/message', messageRoutes)
 app.use('/api/auth', authRoutes)
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`\nExample app listening on port ${port}`)
 })

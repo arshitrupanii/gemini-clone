@@ -1,4 +1,5 @@
 import { GoogleGenAI } from "@google/genai";
+import Message from "../schema/messages.schema.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -11,6 +12,8 @@ if(!process.env.GEMINI_API_KEY){
 
 const generateResponse = async(req, res) => {
     try {
+        const userid = req.body
+        console.log(userid)
         const prompt = req.body.prompt;
                 
         const response = await ai.models.generateContent({
@@ -19,6 +22,9 @@ const generateResponse = async(req, res) => {
             systemInstruction:`response must be in organize in paragraph headline and add emoji if needed`
             
         });
+
+        const saveResponse = new Message({prompt,response:response.text});
+        await saveResponse.save()
 
         res.send({ response: response.text });
         
