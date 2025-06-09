@@ -1,5 +1,4 @@
 import { GoogleGenAI } from "@google/genai";
-import Message from "../schema/messages.schema.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -12,8 +11,6 @@ if(!process.env.GEMINI_API_KEY){
 
 const generateResponse = async(req, res) => {
     try {
-        const userid = req.body
-        console.log(userid)
         const prompt = req.body.prompt;
                 
         const response = await ai.models.generateContent({
@@ -23,8 +20,8 @@ const generateResponse = async(req, res) => {
             
         });
 
-        const saveResponse = new Message({prompt,response:response.text});
-        await saveResponse.save()
+        // let responses = localStorage.setItem("response", response.text);
+        // let prompts = localStorage.setItem("prompt", prompt);
 
         res.send({ response: response.text });
         

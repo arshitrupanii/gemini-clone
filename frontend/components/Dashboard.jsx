@@ -13,7 +13,8 @@ const Dashboard = () => {
     setPrompts(prev => [...prev, newMessage]);
     let prompt = newMessage
 
-    const response = await axios.post('http://localhost:3000/api/message/getResponse', { prompt })
+    let response = await axios.post('http://localhost:3000/message/getResponse', { prompt })
+
     setresponses(prev => [...prev, response.data.response]);
   };
 
