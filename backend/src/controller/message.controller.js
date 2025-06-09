@@ -20,9 +20,6 @@ const generateResponse = async(req, res) => {
             
         });
 
-        // let responses = localStorage.setItem("response", response.text);
-        // let prompts = localStorage.setItem("prompt", prompt);
-
         res.send({ response: response.text });
         
     } catch (error) {
