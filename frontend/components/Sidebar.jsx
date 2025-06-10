@@ -8,9 +8,11 @@ const Sidebar = () => {
           <span className="">
             <img className="p-2 rounded-full w-9 h-9 cursor-pointer hover:bg-gray-700 " src="https://img.icons8.com/?size=100&id=120374&format=png&color=EBEBEB" alt="" />
           </span>
+
           <span className="">
             <img className="p-2 rounded-full w-9 h-9 cursor-pointer hover:bg-gray-700 " src="https://img.icons8.com/?size=100&id=7695&format=png&color=737373" alt="" />
           </span>
+          
         </div>
 
         {/* new chat */}
