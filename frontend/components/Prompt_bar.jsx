@@ -19,8 +19,8 @@ const Prompt_bar = ({ onSubmit }) => {
   }
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="absolute bottom-15 w-[55vw] flex flex-col gap-3 rounded-2xl border border-gray-800 p-5">
+    <div className="flex items-center justify-center ">
+      <div className="max-lg:w-[90%] min-md:w-[75%] flex flex-col gap-3 rounded-2xl border border-gray-800 p-5">
 
         {/* message bar */}
         <div>

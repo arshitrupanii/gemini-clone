@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div className="min-w-full min-h-fit flex justify-between">
+        <div className="min-w-full min-h-fit flex justify-between p-1">
 
             <div className="flex flex-col gap-1">
                 <h1 className="text-xl font-light">Gemini</h1>

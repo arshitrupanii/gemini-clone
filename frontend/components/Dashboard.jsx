@@ -12,34 +12,36 @@ const Dashboard = () => {
 
   const [prompts, setPrompts] = useState(storedPrompts)
   const [responses, setresponses] = useState(storedResponses)
+  const [loading, setLoading] = useState(false)
   
 
   const handleSubmit = async(newMessage) => {
     let prompt = newMessage
-    
-    let response = await (await axios.post('http://localhost:3000/message/getResponse', { prompt })).data.response;
-    
+
     storedPrompts.push(prompt);
     localStorage.setItem("prompts", JSON.stringify(storedPrompts));
+    setPrompts(storedPrompts);
+    
+    setLoading(true)
+    let response = await (await axios.post('http://localhost:3000/message/getResponse', { prompt })).data.response;
+    setLoading(false)
     
     // ✅ Parse stored responses
     storedResponses.push(response);
     localStorage.setItem("responses", JSON.stringify(storedResponses));
     
-    
-    setPrompts(storedPrompts);
     setresponses(storedResponses);
   };
 
   return (
-    <div className="w-[78vw] h-screen text-white p-4">
+    <div className="w-full h-screen text-white p-4 overflow-auto">
 
       {/* navbar */}
       <Navbar/>
 
 
       {/* chat area */}
-      <Chat_area prompts={prompts} responses={responses}/>
+      <Chat_area prompts={prompts} responses={responses} loading={loading}/>
 
 
       {/* prompt bar */}
