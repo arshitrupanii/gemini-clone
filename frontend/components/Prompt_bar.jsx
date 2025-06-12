@@ -34,16 +34,16 @@ const Prompt_bar = ({ onSubmit }) => {
 
         <div className="flex items-center justify-between opacity-60">
           <div className="flex gap-3 items-center">
-            <span className="px-1 py-1 hover:bg-gray-700 cursor-pointer rounded-full">
+            <span className="px-1 py-1 max-sm:hidden hover:bg-gray-700 cursor-pointer rounded-full">
               <img className="w-5 h-5" src="https://img.icons8.com/?size=100&id=11153&format=png&color=EBEBEB" alt="" />
             </span>
 
-            <span className="flex gap-2 items-center hover:bg-gray-700 cursor-pointer rounded-3xl px-2 py-1">
+            <span className="flex  gap-2 items-center hover:bg-gray-700 cursor-pointer rounded-3xl px-2 py-1">
               <img className="w-5 h-5" src="https://img.icons8.com/?size=100&id=Ngf5dT8xL0GZ&format=png&color=EBEBEB" alt="" />
               <span className="text-[13px]">Deep Research</span>
             </span>
 
-            <span className="flex gap-2 items-center hover:bg-gray-700 cursor-pointer rounded-3xl px-2 py-1">
+            <span className="flex max-sm:hidden gap-2 items-center hover:bg-gray-700 cursor-pointer rounded-3xl px-2 py-1">
               <img className="w-5 h-5" src="https://img.icons8.com/?size=100&id=40314&format=png&color=EBEBEB" alt="" />
               <span className="text-[13px]">Canvas</span>
             </span>

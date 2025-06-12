@@ -4,12 +4,6 @@ const SidebarContent = ({ onClose }) => (
   <>
     {/* Top buttons */}
     <div className="flex justify-between items-center">
-      {/* Menu button only for display purpose (can remove if not needed) */}
-      <img
-        className="p-2 m-1 w-9 h-9 cursor-pointer"
-        src="https://img.icons8.com/?size=100&id=8113&format=png&color=EBEBEB"
-        alt="menu"
-      />
 
       {/* Close button (mobile only) */}
       <button onClick={onClose} className="lg:hidden block">
@@ -68,7 +62,7 @@ const SidebarContent = ({ onClose }) => (
     <div className="flex flex-col gap-5">
       <span className="text-gray-400">Recent</span>
       <div className="flex flex-col gap-3 text-gray-400 text-[14px]">
-        {Array(5)
+        {Array(6)
           .fill(0)
           .map((_, i) => (
             <span
@@ -116,7 +110,7 @@ const Sidebar = () => {
       </div>
 
       {/* Mobile Toggle Button */}
-      <div className="lg:hidden block">
+      <div className="lg:hidden max-sm:hidden block ">
         <button onClick={() => setToggle(true)}>
           <img
             className="p-2 m-1 w-9 h-9 cursor-pointer"

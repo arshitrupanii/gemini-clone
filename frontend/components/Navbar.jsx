@@ -2,9 +2,9 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div className="min-w-full min-h-fit flex justify-between p-1">
+        <div className="min-w-full min-h-fit flex justify-between pb-2">
 
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 ">
                 <h1 className="text-xl font-light">Gemini</h1>
 
                 {/* dropdown */}
@@ -20,9 +20,9 @@ const Navbar = () => {
             </div>
 
             {/* side buttons */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 ">
 
-                <button className="bg-[#3d3f42] flex hover:bg-[#5c5f6c] gap-3 text-[13px] cursor-pointer px-6 rounded-2xl py-3">
+                <button className="bg-[#3d3f42] max-sm:hidden flex hover:bg-[#5c5f6c] gap-3 text-[13px] cursor-pointer px-6 rounded-2xl py-3">
                     <span>
                         <img className="w-4 h-4" src="https://img.icons8.com/?size=100&id=VSROkm9ByHs0&format=png&color=F25081" alt="" />
                     </span>

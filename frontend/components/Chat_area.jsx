@@ -11,7 +11,7 @@ const Chat_area = ({ prompts, responses, loading }) => {
   }, [prompts, responses])
 
   return (
-    <div className="w-full h-[70vh] overflow-y-auto lg:px-36 md:px-14 py-10 flex flex-col gap-4">
+    <div className="w-full h-[70vh] overflow-y-auto lg:px-36 md:px-14 py-10 max-sm:p-0 flex flex-col gap-4">
       {prompts.map((prompt, index) => (
         <div key={index}>
           {/* User Prompt */}
