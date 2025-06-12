@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 const Chat_area = ({ prompts, responses, loading }) => {
   if (!prompts || prompts.length === 0) {
@@ -10,7 +10,6 @@ const Chat_area = ({ prompts, responses, loading }) => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [prompts, responses])
 
-
   return (
     <div className="w-full h-[70vh] overflow-y-auto lg:px-36 md:px-14 py-10 flex flex-col gap-4">
       {prompts.map((prompt, index) => (
@@ -20,13 +19,27 @@ const Chat_area = ({ prompts, responses, loading }) => {
             {prompt}
           </div>
 
+
           {/* Gemini Response */}
           {responses[index] && (
-            <div className="w-fit flex flex-col  text-[15px] gap-3 mr-auto left-0 p-3 text-white rounded shadow">
-              <img className='w-7 h-7' src="https://img.icons8.com/?size=100&id=iBkBIBWE6tfT&format=png&color=000000" alt="" />
-              {responses[index]}
+            <div className="w-fit flex flex-col text-[15px] gap-3 mr-auto left-0 p-3 text-white rounded shadow">
+              <img
+                className="w-7 h-7"
+                src="https://img.icons8.com/?size=100&id=iBkBIBWE6tfT&format=png&color=000000"
+                alt=""
+              />
+              <div>
+                {responses[index].split('\n').map((line, i) => (
+                  <React.Fragment key={i}>
+                    <strong>{line.replace(/\*/g, '')}</strong>
+                    <br />
+                  </React.Fragment>
+                ))}
+
+              </div>
             </div>
           )}
+
         </div>
       ))}
       {loading && (

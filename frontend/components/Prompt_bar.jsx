@@ -26,6 +26,7 @@ const Prompt_bar = ({ onSubmit }) => {
         <div>
           <input 
           onKeyDown={handleKeypress}
+          autoComplete="off"
           value={message} 
           onChange={(e) => setMessage(e.target.value)}
           className="w-full p-1 focus:outline-0 " type="text" name="prompt" id="prompt" placeholder="Ask gemini" />

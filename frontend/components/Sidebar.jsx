@@ -3,29 +3,29 @@ import { useState } from "react";
 const SidebarContent = ({ onClose }) => (
   <>
     {/* Top buttons */}
-<div className="flex justify-between items-center">
-  {/* Menu button only for display purpose (can remove if not needed) */}
-  <img
-    className="p-2 m-1 w-9 h-9 cursor-pointer"
-    src="https://img.icons8.com/?size=100&id=8113&format=png&color=EBEBEB"
-    alt="menu"
-  />
+    <div className="flex justify-between items-center">
+      {/* Menu button only for display purpose (can remove if not needed) */}
+      <img
+        className="p-2 m-1 w-9 h-9 cursor-pointer"
+        src="https://img.icons8.com/?size=100&id=8113&format=png&color=EBEBEB"
+        alt="menu"
+      />
 
-  {/* Close button (mobile only) */}
-  <button onClick={onClose} className="lg:hidden block">
-    <img
-      className="p-2 w-9 h-9 cursor-pointer"
-      src="https://img.icons8.com/?size=100&id=8113&format=png&color=EBEBEB"
-      alt="close"
-    />
-  </button>
+      {/* Close button (mobile only) */}
+      <button onClick={onClose} className="lg:hidden block">
+        <img
+          className="p-2 w-9 h-9 cursor-pointer"
+          src="https://img.icons8.com/?size=100&id=8113&format=png&color=EBEBEB"
+          alt="close"
+        />
+      </button>
 
-  <img
-    className="p-2 rounded-full w-9 h-9 cursor-pointer hover:bg-gray-700"
-    src="https://img.icons8.com/?size=100&id=7695&format=png&color=EBEBEB"
-    alt="user"
-  />
-</div>
+      <img
+        className="p-2 rounded-full w-9 h-9 cursor-pointer hover:bg-gray-700"
+        src="https://img.icons8.com/?size=100&id=7695&format=png&color=EBEBEB"
+        alt="user"
+      />
+    </div>
 
     {/* New chat */}
     <div className="flex items-center gap-5 cursor-pointer hover:bg-gray-700 px-2 py-1 rounded-2xl">
@@ -109,7 +109,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Desktop Sidebar */}
-      <div className="w-[20vw] lg:block hidden h-screen bg-[#282a2c] p-7 flex flex-col">
+      <div className="w-[20vw] lg:block hidden h-screen bg-[#282a2c] p-7 flex flex-col overflow-auto">
         <div className="flex flex-col gap-10 overflow-y-auto pr-1">
           <SidebarContent onClose={() => setToggle(!toggle)} />
         </div>
