@@ -31,7 +31,7 @@ const Chat_area = ({ prompts, responses, loading }) => {
               <div>
                 {responses[index].split('\n').map((line, i) => (
                   <React.Fragment key={i}>
-                    <strong>{line.replace(/\*/g, '')}</strong>
+                    {line.replace(/\*/g, '')}
                     <br />
                   </React.Fragment>
                 ))}
