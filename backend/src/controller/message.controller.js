@@ -14,7 +14,7 @@ const generateResponse = async(req, res) => {
         const prompt = req.body.prompt;
                 
         const response = await ai.models.generateContent({
-            model: "gemini-1.5-flash",
+            model: "gemini-2.0-flash-lite",
             contents: prompt,
             systemInstruction:`in response dont use backslash n use br tag `
         });
